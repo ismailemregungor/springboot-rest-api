@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
-
 @Entity
 @Table(name = "users")
 @Data
@@ -22,4 +21,8 @@ public class User {
     @Column(name = "last_name", nullable = false, length = 50)
     private String lastName;
 
+    public User(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 }
